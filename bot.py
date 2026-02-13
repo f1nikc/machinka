@@ -3,6 +3,7 @@ from telebot import types
 import json
 import os
 import re
+import logger
 
 # ---------------- CONFIG ----------------
 TOKEN = "8356103687:AAHGyorXeuAaNmOEv4SvBB4K4WDDSDZRkuk"
@@ -75,6 +76,7 @@ def load_db():
 def save_db(db):
     save_json_safe(DB_FILE, db)
 
+
 # ---------------- Keyboards ----------------
 def main_menu_kb():
     kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -115,6 +117,7 @@ def require_admin(func):
             # сначала вежливый отказ
             try:
                 bot.send_message(message.chat.id, "⛔ У вас нет доступа к этому боту.")
+                logger.log_action_from_message(message, "unauthorized_access", {"tried_action": message.text})
                 # а ниже — полезная подсказка: показать chat_id (в виде кода)
                 bot.send_message(message.chat.id, f"Ваш chat_id: <code>{uid}</code>\nОтправьте его администратору.", parse_mode="HTML")
             except Exception:
@@ -141,7 +144,7 @@ def handle_add_plate_btn(message):
     user_state[uid] = STATE_ADD_PLATE
     user_temp[uid] = {}
     bot.send_message(message.chat.id, "Введите номер (полный A123BC77 или первые 6 символов A123BC). Для отмены нажмите '🏠 Главное меню'.", reply_markup=back_kb())
-
+    logger.log_action_from_message(message, "add_plate_start", {"note": "press_add_button"})
 @bot.message_handler(func=lambda m: m.text == "➖ Удалить номер")
 @require_admin
 def handle_remove_btn(message):
@@ -219,6 +222,23 @@ def handle_cancel_cmd(message):
     else:
         bot.send_message(message.chat.id, "Отменено.")
 
+# ---------------- logger - the best friend of sys.adm ----------------
+@bot.message_handler(commands=['logs'])
+@require_admin
+def cmd_logs(message):
+    recs = logger.read_last(30)
+    if not recs:
+        bot.send_message(message.chat.id, "Лог пуст")
+        return
+    out = []
+    for r in recs:
+        ts = r.get("timestamp", "?")
+        ev = r.get("event", r.get("action", "?"))
+        user = r.get("username") or r.get("user_id") or "-"
+        details = r.get("details", {})
+        out.append(f"{ts} | {ev} | {user} | {details}")
+    bot.send_message(message.chat.id, "\n".join(out))
+
 # ---------------- Main router: handles step-by-step states ----------------
 @bot.message_handler(func=lambda m: True)
 def router(message):
@@ -249,6 +269,8 @@ def router(message):
             admins.append(new_id)
             save_admins(admins)
             bot.send_message(message.chat.id, f"✅ Добавлен админ: {get_admin_display(new_id)}", reply_markup=main_menu_kb())
+            logger.log_action_from_message(message, "add_admin", {"new_admin": new_id})
+
         user_state.pop(uid, None)
         return
 
@@ -271,6 +293,7 @@ def router(message):
         admins = [a for a in admins if a != rem_id]
         save_admins(admins)
         bot.send_message(message.chat.id, f"🗑 Админ удалён: {get_admin_display(rem_id)}", reply_markup=main_menu_kb())
+        logger.log_action_from_message(message, "removed_admin", {"removed_admin": rem_id})
         user_state.pop(uid, None)
         return
 
@@ -340,6 +363,7 @@ def router(message):
         user_state.pop(uid, None)
         user_temp.pop(uid, None)
         bot.send_message(message.chat.id, f"✅ {plate} ({brand}) добавлен в белый список.", reply_markup=main_menu_kb())
+        logger.log_action_from_message(message, "add_plate_complete", {"plate": plate, "brand": brand})
         return
 
     # Remove flow
@@ -364,6 +388,7 @@ def router(message):
             db["cars"] = new
         save_db(db)
         bot.send_message(message.chat.id, f"🗑 Удалено: {removed.get('plate')}", reply_markup=main_menu_kb())
+        logger.log_action_from_message(message, "remove_plate", {"plate": removed.get('plate'), "by_index": True or False})
         user_state.pop(uid, None)
         return
 
