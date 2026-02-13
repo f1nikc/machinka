@@ -11,7 +11,9 @@ from object_detection.detect_car_YOLO import ObjectDetection
 from track_logic import *
 
 import settings
-
+#логирование, добавить на распознование номера и решения пускать нет и ноти в тг
+# logger.log_detection(plate=detected_plate, result="allowed", img_path="/path/to/image.jpg", details = {"confidence": 0.92, "source": "cam1"})
+# logger.log_action(None, None, "notify-admin_on_entry", {"place": detected_plate, "to_admin": admin_id}})
 plate_text = rec_plate
 
 cap = cv2.VideoCapture(1)
