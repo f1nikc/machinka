@@ -1,0 +1,24 @@
+{
+  "cars": [
+    {
+      "plate": "X777XX99",
+      "owner": "Никколо Маккиавелли",
+      "brand": "BMW X5",
+      "color": "Чёрный",
+      "visits": 3
+    },
+    {
+      "plate": "К777РО77",
+      "owner": "Гога",
+      "brand": "Tesla",
+      "visits": 0
+    },
+    {
+      "plate": "О141ОО74",
+      "owner": "Василий Александрович",
+      "brand": "BMW X7",
+      "color": "",
+      "visits": 0
+    }
+  ]
+}
