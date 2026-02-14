@@ -38,7 +38,7 @@ ACTIONS_LOG = Path("logs") / "actions.log"
 
 PLATE_RE = re.compile(r'^[A-ZА-ЯЁ]{1}[0-9]{3}[A-ZА-ЯЁ]{2}[0-9]{2,3}$', re.IGNORECASE)
 
-# ---------------- util ----------------
+# ---------------- util ----------------he
 def now_str():
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat(sep=" ", timespec="seconds")
 
@@ -697,8 +697,17 @@ def interactive_cli(launcher):
             elif cmd == "runlogs":
                 if not args: print("runlogs <mod> [n]"); continue
                 n = int(args[1]) if len(args)>1 and args[1].isdigit() else 80
-                cmd_runlogs = lambda p,n=n: print("\n".join(read_last_lines(os.path.join(LOG_DIR, f"{p}.log"), n)))
-                cmd_runlogs(args[0])
+                if not args:
+                    print("runlogs <module_name> [n]")
+                else:
+                    name = args[0]
+                    n = int(args[1]) if len(args) > 1 and args[1].isdigit() else 80
+                    path = os.path.join(LOG_DIR, f"{name}.log")
+                    lines = read_last_lines(path, n)
+                    if not lines:
+                        print(f"No log file or empty: {path}")
+                    else:
+                        print("\n".join(lines))
             elif cmd in ("quit","exit"):
                 confirm = input("Stop modules and exit? (y/N): ").strip().lower()
                 if confirm == "y":

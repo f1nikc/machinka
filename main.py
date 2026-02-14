@@ -1,5 +1,7 @@
 import time
-
+import threading
+import gc
+import os
 import cv2
 import numpy as np
 import torch
@@ -16,7 +18,7 @@ import settings
 # logger.log_action(None, None, "notify-admin_on_entry", {"place": detected_plate, "to_admin": admin_id}})
 plate_text = rec_plate
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 if not cap.isOpened():
     print("nah")
 else:
@@ -205,12 +207,43 @@ def main(
         device
 ):
     cv2.startWindowThread()
-    detector = ObjectDetection(
-        yolo_model_path,
-        conf=yolo_conf,
-        iou=yolo_iou,
-        device=device
-    )
+    #обновил 1402, до этого было как на 209 строке
+    detector = ObjectDetection(yolo_model_path, conf=yolo_conf, iou=yolo_iou, device=device)
+
+    # старт фонового загрузчика — он попытается подгрузить реальную модель в фоне (если сейчас Dummy)
+    try:
+        detector.start_background_loader(initial_delay=2.0)
+    except Exception:
+        pass
+
+    # опционально: запустить watcher на файл control/reload_yolo (если существует — перезагрузим)
+    # --- control watcher: create control dir and watcher thread to trigger reload_model ---
+    CONTROL_DIR = "control"
+    os.makedirs(CONTROL_DIR, exist_ok=True)
+    RELOAD_FILE = os.path.join(CONTROL_DIR, "reload_yolo")
+
+    def ctrl_watcher(detector, reload_file):
+        # лёгкий watcher: при появлении файла триггерит reload_model и удаляет файл
+        while True:
+            try:
+                if os.path.exists(reload_file):
+                    try:
+                        print("[CTRL] reload file detected, attempting reload_model()")
+                        detector.reload_model()
+                    except Exception as e:
+                        print("[CTRL] reload_model failed:", e)
+                    try:
+                        os.remove(reload_file)
+                    except Exception:
+                        pass
+                time.sleep(1.0)
+            except Exception:
+                # на случай исключений — спать и продолжать
+                time.sleep(1.0)
+
+    watcher_thread = threading.Thread(target=ctrl_watcher, args=(detector, RELOAD_FILE), daemon=True)
+    watcher_thread.start()
+    # --- end watcher ---
 
     LPRnet = build_lprnet(
         lpr_max_len=lpr_max_len,

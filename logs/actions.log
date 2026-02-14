@@ -1,0 +1,4 @@
+{"timestamp": "2026-02-13T14:35:56Z", "event": "admin_action", "user_id": null, "username": "cli", "action": "add_plate_cli", "details": {"plate": "A123BC77", "owner": "hsaashd", "brand": "laksdj"}}
+{"timestamp": "2026-02-13T14:36:43Z", "event": "admin_action", "user_id": null, "username": "cli", "action": "remove_plate_cli", "details": {"plate": "A123BC77"}}
+{"timestamp": "2026-02-13T14:45:47Z", "event": "admin_action", "user_id": null, "username": "cli", "action": "add_admin_cli", "details": {"new_admin": 7109429604}}
+{"timestamp": "2026-02-13T14:46:41Z", "event": "admin_action", "user_id": null, "username": "cli", "action": "remove_admin_cli", "details": {"removed_admin": 7109429604}}

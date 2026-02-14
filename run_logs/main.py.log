@@ -1225,3 +1225,332 @@
 [2026-02-13 14:18:13+00:00] [ERR] RuntimeError: It looks like there is no internet connection and the repo could not be found in the cache (C:\Users\arduino1/.cache\torch\hub)
 [2026-02-13 14:18:13+00:00] [OUT] [0m
 === EXIT code=1 at 2026-02-13T14:18:13+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'main.py'] at 2026-02-13 14:31:42+00:00 ===
+[2026-02-13 14:31:51+00:00] [OUT] nah
+[2026-02-13 14:31:51+00:00] [ERR] [ERROR:0@1.695] global obsensor_uvc_stream_channel.cpp:163 cv::obsensor::getStreamChannelGroup Camera index out of range
+[2026-02-13 14:31:52+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1344, in do_open
+[2026-02-13 14:31:52+00:00] [ERR]     h.request(req.get_method(), req.selector, req.data, headers,
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1336, in request
+[2026-02-13 14:31:52+00:00] [ERR]     self._send_request(method, url, body, headers, encode_chunked)
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1382, in _send_request
+[2026-02-13 14:31:52+00:00] [ERR]     self.endheaders(body, encode_chunked=encode_chunked)
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1331, in endheaders
+[2026-02-13 14:31:52+00:00] [ERR]     self._send_output(message_body, encode_chunked=encode_chunked)
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1091, in _send_output
+[2026-02-13 14:31:52+00:00] [ERR]     self.send(msg)
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1035, in send
+[2026-02-13 14:31:52+00:00] [ERR]     self.connect()
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1477, in connect
+[2026-02-13 14:31:52+00:00] [ERR]     self.sock = self._context.wrap_socket(self.sock,
+[2026-02-13 14:31:52+00:00] [ERR]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 455, in wrap_socket
+[2026-02-13 14:31:52+00:00] [ERR]     return self.sslsocket_class._create(
+[2026-02-13 14:31:52+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1042, in _create
+[2026-02-13 14:31:52+00:00] [ERR]     self.do_handshake()
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1320, in do_handshake
+[2026-02-13 14:31:52+00:00] [ERR]     self._sslobj.do_handshake()
+[2026-02-13 14:31:52+00:00] [ERR] ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+[2026-02-13 14:31:52+00:00] [ERR] 
+[2026-02-13 14:31:52+00:00] [ERR] During handling of the above exception, another exception occurred:
+[2026-02-13 14:31:52+00:00] [ERR] 
+[2026-02-13 14:31:52+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 161, in _parse_repo_info
+[2026-02-13 14:31:52+00:00] [ERR]     with urlopen(f"https://github.com/{repo_owner}/{repo_name}/tree/main/"):
+[2026-02-13 14:31:52+00:00] [ERR]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 215, in urlopen
+[2026-02-13 14:31:52+00:00] [ERR]     return opener.open(url, data, timeout)
+[2026-02-13 14:31:52+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 515, in open
+[2026-02-13 14:31:52+00:00] [ERR]     response = self._open(req, data)
+[2026-02-13 14:31:52+00:00] [ERR]                ^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 532, in _open
+[2026-02-13 14:31:52+00:00] [ERR]     result = self._call_chain(self.handle_open, protocol, protocol +
+[2026-02-13 14:31:52+00:00] [ERR]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 492, in _call_chain
+[2026-02-13 14:31:52+00:00] [ERR]     result = func(*args)
+[2026-02-13 14:31:52+00:00] [ERR]              ^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1392, in https_open
+[2026-02-13 14:31:52+00:00] [ERR]     return self.do_open(http.client.HTTPSConnection, req,
+[2026-02-13 14:31:52+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1347, in do_open
+[2026-02-13 14:31:52+00:00] [ERR]     raise URLError(err)
+[2026-02-13 14:31:52+00:00] [ERR] urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>
+[2026-02-13 14:31:52+00:00] [ERR] 
+[2026-02-13 14:31:52+00:00] [ERR] The above exception was the direct cause of the following exception:
+[2026-02-13 14:31:52+00:00] [ERR] 
+[2026-02-13 14:31:52+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:31:52+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\main.py", line 322, in <module>
+[2026-02-13 14:31:52+00:00] [ERR]     main(
+[2026-02-13 14:31:52+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\main.py", line 208, in main
+[2026-02-13 14:31:52+00:00] [ERR]     detector = ObjectDetection(
+[2026-02-13 14:31:52+00:00] [ERR]                ^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\object_detection\detect_car_YOLO.py", line 23, in __init__
+[2026-02-13 14:31:52+00:00] [ERR]     self.model = self.load_model()
+[2026-02-13 14:31:52+00:00] [ERR]                  ^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\object_detection\detect_car_YOLO.py", line 36, in load_model
+[2026-02-13 14:31:52+00:00] [ERR]     model = torch.hub.load("ultralytics/yolov5", "custom", path=self.__model_path)
+[2026-02-13 14:31:52+00:00] [ERR]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 647, in load
+[2026-02-13 14:31:52+00:00] [ERR]     repo_or_dir = _get_cache_or_reload(
+[2026-02-13 14:31:52+00:00] [ERR]                   ^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 234, in _get_cache_or_reload
+[2026-02-13 14:31:52+00:00] [ERR]     repo_owner, repo_name, ref = _parse_repo_info(github)
+[2026-02-13 14:31:52+00:00] [ERR]                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:31:52+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 177, in _parse_repo_info
+[2026-02-13 14:31:52+00:00] [ERR]     raise RuntimeError(
+[2026-02-13 14:31:52+00:00] [ERR] RuntimeError: It looks like there is no internet connection and the repo could not be found in the cache (C:\Users\arduino1/.cache\torch\hub)
+[2026-02-13 14:31:52+00:00] [OUT] [0m
+=== EXIT code=1 at 2026-02-13T14:31:52+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'main.py'] at 2026-02-13 14:38:48+00:00 ===
+[2026-02-13 14:39:04+00:00] [ERR] [ERROR:0@1.677] global obsensor_uvc_stream_channel.cpp:163 cv::obsensor::getStreamChannelGroup Camera index out of range
+[2026-02-13 14:39:04+00:00] [OUT] nah
+[2026-02-13 14:39:04+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1344, in do_open
+[2026-02-13 14:39:04+00:00] [ERR]     h.request(req.get_method(), req.selector, req.data, headers,
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1336, in request
+[2026-02-13 14:39:04+00:00] [ERR]     self._send_request(method, url, body, headers, encode_chunked)
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1382, in _send_request
+[2026-02-13 14:39:04+00:00] [ERR]     self.endheaders(body, encode_chunked=encode_chunked)
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1331, in endheaders
+[2026-02-13 14:39:04+00:00] [ERR]     self._send_output(message_body, encode_chunked=encode_chunked)
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1091, in _send_output
+[2026-02-13 14:39:04+00:00] [ERR]     self.send(msg)
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1035, in send
+[2026-02-13 14:39:04+00:00] [ERR]     self.connect()
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1477, in connect
+[2026-02-13 14:39:04+00:00] [ERR]     self.sock = self._context.wrap_socket(self.sock,
+[2026-02-13 14:39:04+00:00] [ERR]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 455, in wrap_socket
+[2026-02-13 14:39:04+00:00] [ERR]     return self.sslsocket_class._create(
+[2026-02-13 14:39:04+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1042, in _create
+[2026-02-13 14:39:04+00:00] [ERR]     self.do_handshake()
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1320, in do_handshake
+[2026-02-13 14:39:04+00:00] [ERR]     self._sslobj.do_handshake()
+[2026-02-13 14:39:04+00:00] [ERR] ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+[2026-02-13 14:39:04+00:00] [ERR] 
+[2026-02-13 14:39:04+00:00] [ERR] During handling of the above exception, another exception occurred:
+[2026-02-13 14:39:04+00:00] [ERR] 
+[2026-02-13 14:39:04+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 161, in _parse_repo_info
+[2026-02-13 14:39:04+00:00] [ERR]     with urlopen(f"https://github.com/{repo_owner}/{repo_name}/tree/main/"):
+[2026-02-13 14:39:04+00:00] [ERR]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 215, in urlopen
+[2026-02-13 14:39:04+00:00] [ERR]     return opener.open(url, data, timeout)
+[2026-02-13 14:39:04+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 515, in open
+[2026-02-13 14:39:04+00:00] [ERR]     response = self._open(req, data)
+[2026-02-13 14:39:04+00:00] [ERR]                ^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 532, in _open
+[2026-02-13 14:39:04+00:00] [ERR]     result = self._call_chain(self.handle_open, protocol, protocol +
+[2026-02-13 14:39:04+00:00] [ERR]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 492, in _call_chain
+[2026-02-13 14:39:04+00:00] [ERR]     result = func(*args)
+[2026-02-13 14:39:04+00:00] [ERR]              ^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1392, in https_open
+[2026-02-13 14:39:04+00:00] [ERR]     return self.do_open(http.client.HTTPSConnection, req,
+[2026-02-13 14:39:04+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1347, in do_open
+[2026-02-13 14:39:04+00:00] [ERR]     raise URLError(err)
+[2026-02-13 14:39:04+00:00] [ERR] urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>
+[2026-02-13 14:39:04+00:00] [ERR] 
+[2026-02-13 14:39:04+00:00] [ERR] The above exception was the direct cause of the following exception:
+[2026-02-13 14:39:04+00:00] [ERR] 
+[2026-02-13 14:39:04+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:39:04+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\main.py", line 322, in <module>
+[2026-02-13 14:39:04+00:00] [ERR]     main(
+[2026-02-13 14:39:04+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\main.py", line 208, in main
+[2026-02-13 14:39:04+00:00] [ERR]     detector = ObjectDetection(
+[2026-02-13 14:39:04+00:00] [ERR]                ^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\object_detection\detect_car_YOLO.py", line 23, in __init__
+[2026-02-13 14:39:04+00:00] [ERR]     self.model = self.load_model()
+[2026-02-13 14:39:04+00:00] [ERR]                  ^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\object_detection\detect_car_YOLO.py", line 36, in load_model
+[2026-02-13 14:39:04+00:00] [ERR]     model = torch.hub.load("ultralytics/yolov5", "custom", path=self.__model_path)
+[2026-02-13 14:39:04+00:00] [ERR]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 647, in load
+[2026-02-13 14:39:04+00:00] [ERR]     repo_or_dir = _get_cache_or_reload(
+[2026-02-13 14:39:04+00:00] [ERR]                   ^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 234, in _get_cache_or_reload
+[2026-02-13 14:39:04+00:00] [ERR]     repo_owner, repo_name, ref = _parse_repo_info(github)
+[2026-02-13 14:39:04+00:00] [ERR]                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:04+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 177, in _parse_repo_info
+[2026-02-13 14:39:04+00:00] [ERR]     raise RuntimeError(
+[2026-02-13 14:39:04+00:00] [ERR] RuntimeError: It looks like there is no internet connection and the repo could not be found in the cache (C:\Users\arduino1/.cache\torch\hub)
+[2026-02-13 14:39:04+00:00] [OUT] [0m
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'main.py'] at 2026-02-13 14:44:23+00:00 ===
+[2026-02-13 14:45:40+00:00] [ERR] [ERROR:0@1.698] global obsensor_uvc_stream_channel.cpp:163 cv::obsensor::getStreamChannelGroup Camera index out of range
+[2026-02-13 14:45:40+00:00] [OUT] nah
+[2026-02-13 14:45:40+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1344, in do_open
+[2026-02-13 14:45:40+00:00] [ERR]     h.request(req.get_method(), req.selector, req.data, headers,
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1336, in request
+[2026-02-13 14:45:40+00:00] [ERR]     self._send_request(method, url, body, headers, encode_chunked)
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1382, in _send_request
+[2026-02-13 14:45:40+00:00] [ERR]     self.endheaders(body, encode_chunked=encode_chunked)
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1331, in endheaders
+[2026-02-13 14:45:40+00:00] [ERR]     self._send_output(message_body, encode_chunked=encode_chunked)
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1091, in _send_output
+[2026-02-13 14:45:40+00:00] [ERR]     self.send(msg)
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1035, in send
+[2026-02-13 14:45:40+00:00] [ERR]     self.connect()
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1477, in connect
+[2026-02-13 14:45:40+00:00] [ERR]     self.sock = self._context.wrap_socket(self.sock,
+[2026-02-13 14:45:40+00:00] [ERR]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 455, in wrap_socket
+[2026-02-13 14:45:40+00:00] [ERR]     return self.sslsocket_class._create(
+[2026-02-13 14:45:40+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1042, in _create
+[2026-02-13 14:45:40+00:00] [ERR]     self.do_handshake()
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1320, in do_handshake
+[2026-02-13 14:45:40+00:00] [ERR]     self._sslobj.do_handshake()
+[2026-02-13 14:45:40+00:00] [ERR] ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+[2026-02-13 14:45:40+00:00] [ERR] 
+[2026-02-13 14:45:40+00:00] [ERR] During handling of the above exception, another exception occurred:
+[2026-02-13 14:45:40+00:00] [ERR] 
+[2026-02-13 14:45:40+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 161, in _parse_repo_info
+[2026-02-13 14:45:40+00:00] [ERR]     with urlopen(f"https://github.com/{repo_owner}/{repo_name}/tree/main/"):
+[2026-02-13 14:45:40+00:00] [ERR]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 215, in urlopen
+[2026-02-13 14:45:40+00:00] [ERR]     return opener.open(url, data, timeout)
+[2026-02-13 14:45:40+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 515, in open
+[2026-02-13 14:45:40+00:00] [ERR]     response = self._open(req, data)
+[2026-02-13 14:45:40+00:00] [ERR]                ^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 532, in _open
+[2026-02-13 14:45:40+00:00] [ERR]     result = self._call_chain(self.handle_open, protocol, protocol +
+[2026-02-13 14:45:40+00:00] [ERR]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 492, in _call_chain
+[2026-02-13 14:45:40+00:00] [ERR]     result = func(*args)
+[2026-02-13 14:45:40+00:00] [ERR]              ^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1392, in https_open
+[2026-02-13 14:45:40+00:00] [ERR]     return self.do_open(http.client.HTTPSConnection, req,
+[2026-02-13 14:45:40+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1347, in do_open
+[2026-02-13 14:45:40+00:00] [ERR]     raise URLError(err)
+[2026-02-13 14:45:40+00:00] [ERR] urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>
+[2026-02-13 14:45:40+00:00] [ERR] 
+[2026-02-13 14:45:40+00:00] [ERR] The above exception was the direct cause of the following exception:
+[2026-02-13 14:45:40+00:00] [ERR] 
+[2026-02-13 14:45:40+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:45:40+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\main.py", line 322, in <module>
+[2026-02-13 14:45:40+00:00] [ERR]     main(
+[2026-02-13 14:45:40+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\main.py", line 208, in main
+[2026-02-13 14:45:40+00:00] [ERR]     detector = ObjectDetection(
+[2026-02-13 14:45:40+00:00] [ERR]                ^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\object_detection\detect_car_YOLO.py", line 23, in __init__
+[2026-02-13 14:45:40+00:00] [ERR]     self.model = self.load_model()
+[2026-02-13 14:45:40+00:00] [ERR]                  ^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\object_detection\detect_car_YOLO.py", line 36, in load_model
+[2026-02-13 14:45:40+00:00] [ERR]     model = torch.hub.load("ultralytics/yolov5", "custom", path=self.__model_path)
+[2026-02-13 14:45:40+00:00] [ERR]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 647, in load
+[2026-02-13 14:45:40+00:00] [ERR]     repo_or_dir = _get_cache_or_reload(
+[2026-02-13 14:45:40+00:00] [ERR]                   ^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 234, in _get_cache_or_reload
+[2026-02-13 14:45:40+00:00] [ERR]     repo_owner, repo_name, ref = _parse_repo_info(github)
+[2026-02-13 14:45:40+00:00] [ERR]                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:45:40+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 177, in _parse_repo_info
+[2026-02-13 14:45:40+00:00] [ERR]     raise RuntimeError(
+[2026-02-13 14:45:40+00:00] [ERR] RuntimeError: It looks like there is no internet connection and the repo could not be found in the cache (C:\Users\arduino1/.cache\torch\hub)
+[2026-02-13 14:45:40+00:00] [OUT] [0m
+=== EXIT code=1 at 2026-02-13T14:45:41+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'main.py'] at 2026-02-13 14:52:12+00:00 ===
+=== STOPPED code=1 at 2026-02-13 14:53:08+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'main.py'] at 2026-02-14 09:04:21+00:00 ===
+[2026-02-14 09:04:59+00:00] [ERR] [ERROR:0@3.635] global obsensor_uvc_stream_channel.cpp:163 cv::obsensor::getStreamChannelGroup Camera index out of range
+[2026-02-14 09:04:59+00:00] [OUT] nah
+[2026-02-14 09:04:59+00:00] [ERR] Traceback (most recent call last):
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1344, in do_open
+[2026-02-14 09:04:59+00:00] [ERR]     h.request(req.get_method(), req.selector, req.data, headers,
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1336, in request
+[2026-02-14 09:04:59+00:00] [ERR]     self._send_request(method, url, body, headers, encode_chunked)
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1382, in _send_request
+[2026-02-14 09:04:59+00:00] [ERR]     self.endheaders(body, encode_chunked=encode_chunked)
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1331, in endheaders
+[2026-02-14 09:04:59+00:00] [ERR]     self._send_output(message_body, encode_chunked=encode_chunked)
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1091, in _send_output
+[2026-02-14 09:04:59+00:00] [ERR]     self.send(msg)
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1035, in send
+[2026-02-14 09:04:59+00:00] [ERR]     self.connect()
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1477, in connect
+[2026-02-14 09:04:59+00:00] [ERR]     self.sock = self._context.wrap_socket(self.sock,
+[2026-02-14 09:04:59+00:00] [ERR]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 455, in wrap_socket
+[2026-02-14 09:04:59+00:00] [ERR]     return self.sslsocket_class._create(
+[2026-02-14 09:04:59+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1042, in _create
+[2026-02-14 09:04:59+00:00] [ERR]     self.do_handshake()
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1320, in do_handshake
+[2026-02-14 09:04:59+00:00] [ERR]     self._sslobj.do_handshake()
+[2026-02-14 09:04:59+00:00] [ERR] ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+[2026-02-14 09:04:59+00:00] [ERR] 
+[2026-02-14 09:04:59+00:00] [ERR] During handling of the above exception, another exception occurred:
+[2026-02-14 09:04:59+00:00] [ERR] 
+[2026-02-14 09:04:59+00:00] [ERR] Traceback (most recent call last):
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 161, in _parse_repo_info
+[2026-02-14 09:04:59+00:00] [ERR]     with urlopen(f"https://github.com/{repo_owner}/{repo_name}/tree/main/"):
+[2026-02-14 09:04:59+00:00] [ERR]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 215, in urlopen
+[2026-02-14 09:04:59+00:00] [ERR]     return opener.open(url, data, timeout)
+[2026-02-14 09:04:59+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 515, in open
+[2026-02-14 09:04:59+00:00] [ERR]     response = self._open(req, data)
+[2026-02-14 09:04:59+00:00] [ERR]                ^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 532, in _open
+[2026-02-14 09:04:59+00:00] [ERR]     result = self._call_chain(self.handle_open, protocol, protocol +
+[2026-02-14 09:04:59+00:00] [ERR]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 492, in _call_chain
+[2026-02-14 09:04:59+00:00] [ERR]     result = func(*args)
+[2026-02-14 09:04:59+00:00] [ERR]              ^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1392, in https_open
+[2026-02-14 09:04:59+00:00] [ERR]     return self.do_open(http.client.HTTPSConnection, req,
+[2026-02-14 09:04:59+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1347, in do_open
+[2026-02-14 09:04:59+00:00] [ERR]     raise URLError(err)
+[2026-02-14 09:04:59+00:00] [ERR] urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>
+[2026-02-14 09:04:59+00:00] [ERR] 
+[2026-02-14 09:04:59+00:00] [ERR] The above exception was the direct cause of the following exception:
+[2026-02-14 09:04:59+00:00] [ERR] 
+[2026-02-14 09:04:59+00:00] [ERR] Traceback (most recent call last):
+[2026-02-14 09:04:59+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\main.py", line 322, in <module>
+[2026-02-14 09:04:59+00:00] [ERR]     main(
+[2026-02-14 09:04:59+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\main.py", line 208, in main
+[2026-02-14 09:04:59+00:00] [ERR]     detector = ObjectDetection(
+[2026-02-14 09:04:59+00:00] [ERR]                ^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\object_detection\detect_car_YOLO.py", line 23, in __init__
+[2026-02-14 09:04:59+00:00] [ERR]     self.model = self.load_model()
+[2026-02-14 09:04:59+00:00] [ERR]                  ^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "E:\car-number-detection\car-number-detection-main-usb\object_detection\detect_car_YOLO.py", line 36, in load_model
+[2026-02-14 09:04:59+00:00] [ERR]     model = torch.hub.load("ultralytics/yolov5", "custom", path=self.__model_path)
+[2026-02-14 09:04:59+00:00] [ERR]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 647, in load
+[2026-02-14 09:04:59+00:00] [ERR]     repo_or_dir = _get_cache_or_reload(
+[2026-02-14 09:04:59+00:00] [ERR]                   ^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 234, in _get_cache_or_reload
+[2026-02-14 09:04:59+00:00] [ERR]     repo_owner, repo_name, ref = _parse_repo_info(github)
+[2026-02-14 09:04:59+00:00] [ERR]                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-14 09:04:59+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py", line 177, in _parse_repo_info
+[2026-02-14 09:04:59+00:00] [ERR]     raise RuntimeError(
+[2026-02-14 09:04:59+00:00] [ERR] RuntimeError: It looks like there is no internet connection and the repo could not be found in the cache (C:\Users\arduino1/.cache\torch\hub)
+[2026-02-14 09:05:00+00:00] [OUT] [0m
+=== EXIT code=1 at 2026-02-14T09:05:00+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'main.py'] at 2026-02-14 09:59:28+00:00 ===
+[2026-02-14 09:59:40+00:00] [ERR] [ERROR:0@2.644] global obsensor_uvc_stream_channel.cpp:163 cv::obsensor::getStreamChannelGroup Camera index out of range
+[2026-02-14 09:59:40+00:00] [OUT] nah
+[2026-02-14 09:59:40+00:00] [OUT] [ObjectDetection] Using certifi CA bundle for SSL verification.
+[2026-02-14 09:59:40+00:00] [OUT] [ObjectDetection] 'ultralytics' package not installed, skipping that option.
+[2026-02-14 09:59:40+00:00] [OUT] [ObjectDetection] Attempting torch.hub.load from 'ultralytics/yolov5' (may require internet)...
+[2026-02-14 09:59:41+00:00] [ERR] C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\hub.py:247: UserWarning: You are about to download and run code from an untrusted repository. In a future release, this won't be allowed. To add the repository to your trusted list, change the command to load(..., trust_repo=False) and a command prompt will appear asking for an explicit confirmation of trust, or load(..., trust_repo=True), which will assume that the prompt is to be answered with 'yes'. You can also use load(..., trust_repo='check') which will only prompt for confirmation if the repo is not already trusted. This will eventually be the default behaviour
+[2026-02-14 09:59:41+00:00] [ERR]   _check_repo_is_trusted(
+[2026-02-14 09:59:41+00:00] [OUT] Downloading: "https://github.com/ultralytics/yolov5/zipball/master" to C:\Users\arduino1/.cache\torch\hub\master.zip
+[2026-02-14 09:59:42+00:00] [OUT] [ObjectDetection] torch.hub.load failed: ModuleNotFoundError("No module named 'ultralytics'")
+[2026-02-14 09:59:42+00:00] [OUT] [ObjectDetection] !!! All model-load attempts failed. Falling back to DummyModel (no detections).
+[2026-02-14 09:59:42+00:00] [OUT] [ObjectDetection] Model load attempts summary:
+[2026-02-14 09:59:42+00:00] [OUT] [ObjectDetection]  - torch_hub_other : ModuleNotFoundError("No module named 'ultralytics'")
+[2026-02-14 09:59:43+00:00] [ERR] [ERROR:0@5.676] global obsensor_uvc_stream_channel.cpp:163 cv::obsensor::getStreamChannelGroup Camera index out of range
+[2026-02-14 09:59:43+00:00] [OUT] [0m
+=== EXIT code=0 at 2026-02-14T09:59:44+00:00 ===

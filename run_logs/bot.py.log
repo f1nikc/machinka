@@ -372,3 +372,203 @@
 [2026-02-13 14:18:34+00:00] [ERR] requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=20)
 [2026-02-13 14:18:34+00:00] [ERR] "
 === STOPPED code=1 at 2026-02-13 14:19:46+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'bot.py'] at 2026-02-13 14:31:42+00:00 ===
+[2026-02-13 14:31:43+00:00] [OUT] Bot ready
+[2026-02-13 14:39:12+00:00] [ERR] 2026-02-13 17:39:12,343 (__init__.py:1115 MainThread) ERROR - TeleBot: "Infinity polling exception: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)"
+[2026-02-13 14:39:12+00:00] [ERR] 2026-02-13 17:39:12,345 (__init__.py:1117 MainThread) ERROR - TeleBot: "Exception traceback:
+[2026-02-13 14:39:12+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+[2026-02-13 14:39:12+00:00] [ERR]     response = conn.getresponse()
+[2026-02-13 14:39:12+00:00] [ERR]                ^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+[2026-02-13 14:39:12+00:00] [ERR]     httplib_response = super().getresponse()
+[2026-02-13 14:39:12+00:00] [ERR]                        ^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1428, in getresponse
+[2026-02-13 14:39:12+00:00] [ERR]     response.begin()
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 331, in begin
+[2026-02-13 14:39:12+00:00] [ERR]     version, status, reason = self._read_status()
+[2026-02-13 14:39:12+00:00] [ERR]                               ^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 292, in _read_status
+[2026-02-13 14:39:12+00:00] [ERR]     line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+[2026-02-13 14:39:12+00:00] [ERR]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 707, in readinto
+[2026-02-13 14:39:12+00:00] [ERR]     return self._sock.recv_into(b)
+[2026-02-13 14:39:12+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1252, in recv_into
+[2026-02-13 14:39:12+00:00] [ERR]     return self.read(nbytes, buffer)
+[2026-02-13 14:39:12+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1104, in read
+[2026-02-13 14:39:12+00:00] [ERR]     return self._sslobj.read(len, buffer)
+[2026-02-13 14:39:12+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR] TimeoutError: The read operation timed out
+[2026-02-13 14:39:12+00:00] [ERR] 
+[2026-02-13 14:39:12+00:00] [ERR] The above exception was the direct cause of the following exception:
+[2026-02-13 14:39:12+00:00] [ERR] 
+[2026-02-13 14:39:12+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 644, in send
+[2026-02-13 14:39:12+00:00] [ERR]     resp = conn.urlopen(
+[2026-02-13 14:39:12+00:00] [ERR]            ^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+[2026-02-13 14:39:12+00:00] [ERR]     retries = retries.increment(
+[2026-02-13 14:39:12+00:00] [ERR]               ^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+[2026-02-13 14:39:12+00:00] [ERR]     raise reraise(type(error), error, _stacktrace)
+[2026-02-13 14:39:12+00:00] [ERR]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+[2026-02-13 14:39:12+00:00] [ERR]     raise value
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+[2026-02-13 14:39:12+00:00] [ERR]     response = self._make_request(
+[2026-02-13 14:39:12+00:00] [ERR]                ^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+[2026-02-13 14:39:12+00:00] [ERR]     self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+[2026-02-13 14:39:12+00:00] [ERR]     raise ReadTimeoutError(
+[2026-02-13 14:39:12+00:00] [ERR] urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+[2026-02-13 14:39:12+00:00] [ERR] 
+[2026-02-13 14:39:12+00:00] [ERR] During handling of the above exception, another exception occurred:
+[2026-02-13 14:39:12+00:00] [ERR] 
+[2026-02-13 14:39:12+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+[2026-02-13 14:39:12+00:00] [ERR]     self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+[2026-02-13 14:39:12+00:00] [ERR]     self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+[2026-02-13 14:39:12+00:00] [ERR]     raise e
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+[2026-02-13 14:39:12+00:00] [ERR]     polling_thread.raise_exceptions()
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 115, in raise_exceptions
+[2026-02-13 14:39:12+00:00] [ERR]     raise self.exception_info
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 97, in run
+[2026-02-13 14:39:12+00:00] [ERR]     task(*args, **kwargs)
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+[2026-02-13 14:39:12+00:00] [ERR]     updates = self.get_updates(offset=(self.last_update_id + 1),
+[2026-02-13 14:39:12+00:00] [ERR]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+[2026-02-13 14:39:12+00:00] [ERR]     json_updates = apihelper.get_updates(
+[2026-02-13 14:39:12+00:00] [ERR]                    ^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\apihelper.py", line 339, in get_updates
+[2026-02-13 14:39:12+00:00] [ERR]     return _make_request(token, method_url, params=payload)
+[2026-02-13 14:39:12+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+[2026-02-13 14:39:12+00:00] [ERR]     result = _get_req_session().request(
+[2026-02-13 14:39:12+00:00] [ERR]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 589, in request
+[2026-02-13 14:39:12+00:00] [ERR]     resp = self.send(prep, **send_kwargs)
+[2026-02-13 14:39:12+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 703, in send
+[2026-02-13 14:39:12+00:00] [ERR]     r = adapter.send(request, **kwargs)
+[2026-02-13 14:39:12+00:00] [ERR]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:39:12+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 690, in send
+[2026-02-13 14:39:12+00:00] [ERR]     raise ReadTimeout(e, request=request)
+[2026-02-13 14:39:12+00:00] [ERR] requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+[2026-02-13 14:39:12+00:00] [ERR] "
+=== STOPPED code=1 at 2026-02-13 14:39:13+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'bot.py'] at 2026-02-13 14:44:23+00:00 ===
+[2026-02-13 14:44:23+00:00] [OUT] Bot ready
+[2026-02-13 14:44:51+00:00] [ERR] 2026-02-13 17:44:51,931 (__init__.py:1115 MainThread) ERROR - TeleBot: "Infinity polling exception: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=20)"
+[2026-02-13 14:44:51+00:00] [ERR] 2026-02-13 17:44:51,933 (__init__.py:1117 MainThread) ERROR - TeleBot: "Exception traceback:
+[2026-02-13 14:44:51+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+[2026-02-13 14:44:51+00:00] [ERR]     self._validate_conn(conn)
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+[2026-02-13 14:44:51+00:00] [ERR]     conn.connect()
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 796, in connect
+[2026-02-13 14:44:51+00:00] [ERR]     sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+[2026-02-13 14:44:51+00:00] [ERR]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+[2026-02-13 14:44:51+00:00] [ERR]     ssl_sock = ssl_wrap_socket(
+[2026-02-13 14:44:51+00:00] [ERR]                ^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\ssl_.py", line 483, in ssl_wrap_socket
+[2026-02-13 14:44:51+00:00] [ERR]     ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+[2026-02-13 14:44:51+00:00] [ERR]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\ssl_.py", line 527, in _ssl_wrap_socket_impl
+[2026-02-13 14:44:51+00:00] [ERR]     return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+[2026-02-13 14:44:51+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 455, in wrap_socket
+[2026-02-13 14:44:51+00:00] [ERR]     return self.sslsocket_class._create(
+[2026-02-13 14:44:51+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1042, in _create
+[2026-02-13 14:44:51+00:00] [ERR]     self.do_handshake()
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1320, in do_handshake
+[2026-02-13 14:44:51+00:00] [ERR]     self._sslobj.do_handshake()
+[2026-02-13 14:44:51+00:00] [ERR] TimeoutError: _ssl.c:983: The handshake operation timed out
+[2026-02-13 14:44:51+00:00] [ERR] 
+[2026-02-13 14:44:51+00:00] [ERR] The above exception was the direct cause of the following exception:
+[2026-02-13 14:44:51+00:00] [ERR] 
+[2026-02-13 14:44:51+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 644, in send
+[2026-02-13 14:44:51+00:00] [ERR]     resp = conn.urlopen(
+[2026-02-13 14:44:51+00:00] [ERR]            ^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+[2026-02-13 14:44:51+00:00] [ERR]     retries = retries.increment(
+[2026-02-13 14:44:51+00:00] [ERR]               ^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+[2026-02-13 14:44:51+00:00] [ERR]     raise reraise(type(error), error, _stacktrace)
+[2026-02-13 14:44:51+00:00] [ERR]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+[2026-02-13 14:44:51+00:00] [ERR]     raise value
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+[2026-02-13 14:44:51+00:00] [ERR]     response = self._make_request(
+[2026-02-13 14:44:51+00:00] [ERR]                ^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+[2026-02-13 14:44:51+00:00] [ERR]     raise new_e
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+[2026-02-13 14:44:51+00:00] [ERR]     self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+[2026-02-13 14:44:51+00:00] [ERR]     raise ReadTimeoutError(
+[2026-02-13 14:44:51+00:00] [ERR] urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=20)
+[2026-02-13 14:44:51+00:00] [ERR] 
+[2026-02-13 14:44:51+00:00] [ERR] During handling of the above exception, another exception occurred:
+[2026-02-13 14:44:51+00:00] [ERR] 
+[2026-02-13 14:44:51+00:00] [ERR] Traceback (most recent call last):
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+[2026-02-13 14:44:51+00:00] [ERR]     self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+[2026-02-13 14:44:51+00:00] [ERR]     self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+[2026-02-13 14:44:51+00:00] [ERR]     raise e
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+[2026-02-13 14:44:51+00:00] [ERR]     polling_thread.raise_exceptions()
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 115, in raise_exceptions
+[2026-02-13 14:44:51+00:00] [ERR]     raise self.exception_info
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 97, in run
+[2026-02-13 14:44:51+00:00] [ERR]     task(*args, **kwargs)
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+[2026-02-13 14:44:51+00:00] [ERR]     updates = self.get_updates(offset=(self.last_update_id + 1),
+[2026-02-13 14:44:51+00:00] [ERR]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+[2026-02-13 14:44:51+00:00] [ERR]     json_updates = apihelper.get_updates(
+[2026-02-13 14:44:51+00:00] [ERR]                    ^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\apihelper.py", line 339, in get_updates
+[2026-02-13 14:44:51+00:00] [ERR]     return _make_request(token, method_url, params=payload)
+[2026-02-13 14:44:51+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+[2026-02-13 14:44:51+00:00] [ERR]     result = _get_req_session().request(
+[2026-02-13 14:44:51+00:00] [ERR]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 589, in request
+[2026-02-13 14:44:51+00:00] [ERR]     resp = self.send(prep, **send_kwargs)
+[2026-02-13 14:44:51+00:00] [ERR]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 703, in send
+[2026-02-13 14:44:51+00:00] [ERR]     r = adapter.send(request, **kwargs)
+[2026-02-13 14:44:51+00:00] [ERR]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-02-13 14:44:51+00:00] [ERR]   File "C:\Users\arduino1\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 690, in send
+[2026-02-13 14:44:51+00:00] [ERR]     raise ReadTimeout(e, request=request)
+[2026-02-13 14:44:51+00:00] [ERR] requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=20)
+[2026-02-13 14:44:51+00:00] [ERR] "
+[2026-02-13 14:48:02+00:00] [ERR] 2026-02-13 17:48:02,196 (__init__.py:1121 MainThread) ERROR - TeleBot: "Infinity polling: polling exited"
+[2026-02-13 14:48:02+00:00] [ERR] 2026-02-13 17:48:02,197 (__init__.py:1123 MainThread) ERROR - TeleBot: "Break infinity polling"
+=== EXIT code=0 at 2026-02-13T14:48:02+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'bot.py'] at 2026-02-13 14:48:16+00:00 ===
+[2026-02-13 14:48:25+00:00] [OUT] Bot ready
+=== STOPPED code=1 at 2026-02-13 14:49:06+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'bot.py'] at 2026-02-13 14:49:29+00:00 ===
+[2026-02-13 14:49:59+00:00] [OUT] Bot ready
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'bot.py'] at 2026-02-13 14:52:12+00:00 ===
+[2026-02-13 14:52:16+00:00] [OUT] Bot ready
+=== STOPPED code=1 at 2026-02-13 14:53:08+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'bot.py'] at 2026-02-14 09:04:21+00:00 ===
+[2026-02-14 09:04:30+00:00] [OUT] Bot ready
+=== STOPPED code=1 at 2026-02-14 09:05:19+00:00 ===
+=== START ['C:\\Users\\arduino1\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', 'bot.py'] at 2026-02-14 09:59:28+00:00 ===
+[2026-02-14 09:59:36+00:00] [OUT] Bot ready
+=== STOPPED code=1 at 2026-02-14 10:00:12+00:00 ===
